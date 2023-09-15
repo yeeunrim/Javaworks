@@ -1,0 +1,32 @@
+package singleton.student;
+
+public class StudentMain {
+
+	public static void main(String[] args) {
+		School students = School.getInstance();
+		School students2 = School.getInstance();
+		
+		Student lee = students.createStudent();
+		Student seo = students.createStudent();
+		Student rim = students.createStudent();
+		
+		System.out.println("학번 : " + lee.getStudentNum());
+		System.out.println("학번 : " + seo.getStudentNum());
+		System.out.println("학번 : " + rim.getStudentNum());
+		
+		System.out.println();
+		
+		//Student 객체의 주소 - heap
+		System.out.println(lee);
+		System.out.println(seo);
+		System.out.println(rim);
+		
+		System.out.println();
+		
+		//School 객체의 주소 - static
+		System.out.println(students);
+		System.out.println(students2);
+
+	}
+
+}

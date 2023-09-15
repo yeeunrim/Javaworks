@@ -37,6 +37,12 @@ public class CalendarTest2 {
 		betweenTime = betweenTime / (24*60*60*1000);
 		System.out.println("기준일로부터 " + betweenTime + "일 지남");
 		
+		//현재까지의 시간 - java.lang에 있는 것 ! - ms
+		System.out.println(System.currentTimeMillis());
+		
+		//현재까지의 시간 - ns
+		System.out.println(System.nanoTime());
+		
 
 	}
 

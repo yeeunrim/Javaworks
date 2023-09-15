@@ -1,0 +1,19 @@
+package singleton.car;
+
+public class Car {
+	//필드
+	private static int SerialNum = 1000;
+	private int carNum;
+	
+	//생성자
+	public Car() {
+		SerialNum++;
+		carNum = SerialNum;
+	}
+	
+	//메서드
+	public int getCarNum() {
+		return carNum;
+	}
+	
+}
