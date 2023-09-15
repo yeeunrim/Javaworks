@@ -1,0 +1,32 @@
+package dates;
+
+import java.util.Calendar;
+
+public class CalendarTest {
+
+	public static void main(String[] args) {
+		Calendar cal = Calendar.getInstance();
+		System.out.println(cal);
+		
+		//연도
+		int year = cal.get(Calendar.YEAR);
+		System.out.println(cal.get(Calendar.YEAR));
+		System.out.print(year + "년 ");
+		
+		//월 - 배열이기 때문에 0부터 시작하는 특징이 있음
+		//그래서 1을 더해주는 작업이 필요
+		int month = cal.get(Calendar.MONTH) + 1;
+		System.out.print(month + "월 ");
+		
+		//일
+		int date = cal.get(Calendar.DATE);
+		System.out.print(date + "일 ");
+		
+		//요일
+		int day = cal.get(Calendar.DAY_OF_WEEK);
+		System.out.print(day + "요일");
+		
+	}
+	
+
+}

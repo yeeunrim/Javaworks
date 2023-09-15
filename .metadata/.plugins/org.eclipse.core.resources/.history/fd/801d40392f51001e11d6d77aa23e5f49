@@ -1,0 +1,31 @@
+package statics;
+
+public class StudentTest {
+
+	public static void main(String[] args) {
+		//인스턴스 객체 변수, 클래스 객체 변수(static이 붙어있는 경우)
+		//클래스 객체 변수 : 클래스 이름으로 직접 접근 (new 하지 않음)
+		//1.인스턴스 객체 변수
+		/* Student s1 = new Student();
+		Student s2 = new Student();
+
+		s1.serialNum++;
+		System.out.println(s1.serialNum); //1001 
+		
+		s2.serialNum++;
+		System.out.println(s2.serialNum); //1001 
+		*/
+		
+		//2.클래스 객체 변수
+		Student.serialNum++;
+		System.out.println(Student.serialNum);
+		
+		Student.serialNum++;
+		System.out.println(Student.serialNum);
+		
+		//System.out.println("s1 = " + s1.getId());
+		//System.out.println("s2 = " + s2.getId());
+		
+	}
+
+}

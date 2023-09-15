@@ -1,0 +1,15 @@
+package reference.circle;
+
+public class PointTest {
+
+	public static void main(String[] args) {
+		
+		Point p1 = new Point(3, 4);
+		p1.showPointInfo();
+		
+		Point p2 = new Point(7, 8);
+		p2.showPointInfo();
+		
+	}
+
+}

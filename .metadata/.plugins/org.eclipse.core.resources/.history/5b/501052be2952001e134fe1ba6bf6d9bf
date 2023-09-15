@@ -1,0 +1,21 @@
+package student;
+
+public class Student {
+	//이름 학년 반
+	//필드
+	String studentName;
+	int studentGrade;
+	int studentClass;
+	
+	//기본 생성자
+	public Student() {}
+	
+	//생성자 + 매개변수
+	public Student(String studentName, int studentGrade, int studentClass) {
+		this.studentName = studentName;
+		this.studentGrade = studentGrade;
+		this.studentClass = studentClass;
+	}
+
+	
+}

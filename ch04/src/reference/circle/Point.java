@@ -1,0 +1,17 @@
+package reference.circle;
+
+//point라는 자료형 생성
+public class Point {
+	// 정의 좌표 - 필드
+	int x;
+	int y;
+	
+	public Point(int x, int y) {
+		this.x = x;
+		this.y = y;
+	}
+	
+	public void showPointInfo() {
+		System.out.println("점 (" + x + ", " + y + ")");
+	}
+}

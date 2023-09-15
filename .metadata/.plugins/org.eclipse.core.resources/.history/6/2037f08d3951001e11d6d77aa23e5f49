@@ -1,0 +1,20 @@
+package inheritance.airplane;
+
+public class SuperSonicAirPlane extends AirPlane {
+	
+	//1 - 일반 비행, 2 - 초음속 비행
+	//상수는 static을 사용하는 경우가 많다.
+	static final int NORMAL = 1; 
+	static final int SUPERSONIC = 2;
+	
+	int flyMode = NORMAL;
+	
+	public void 비행하다() {
+		if(flyMode == SUPERSONIC) {
+			System.out.println("비행기가 초음속 비행합니다.");
+		} else {
+			super.비행하다(); //부모꺼와 같은 것을 사용할 때로 부모 메서드 상속한 것
+		}
+	}
+	
+}

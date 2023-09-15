@@ -1,0 +1,17 @@
+package polymorphism.fruits;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("1.포도 | 2.바나나 | 3.복숭아");
+		System.out.print("선택> ");
+		
+		int selcetNo = Integer.parseInt(scanner.nextLine());
+	}
+
+}

@@ -1,0 +1,32 @@
+package basicclass;
+
+public class EqualsTest {
+
+	public static void main(String[] args) {
+		String name1 = new String("우영우");
+		String name2 = new String("우영우");
+
+		//인스턴스의 메모리 주소를 비교
+		//해쉬코드 - 메모리 주소(10진수)
+		System.out.println(System.identityHashCode(name1)); //93122545(주소)
+		System.out.println(System.identityHashCode(name2)); //2083562754(주소)
+		
+		System.out.println("-------");
+		
+		System.out.println(name1 == name2); //false
+		System.out.println(name1 != name2); //true
+		
+		System.out.println("-------");
+		
+		System.out.println(name1.equals(name2)); //true
+		
+		System.out.println("-------");
+		
+		Book book1 = new Book(100, "개미");
+		Book book2 = new Book(100, "개미");
+		
+		System.out.println(book1 == book2); //false
+		System.out.println(book1.equals(book2)); //false -> 맞는 답 : true (재정의 필요)
+	}
+
+}

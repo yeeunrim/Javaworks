@@ -1,0 +1,34 @@
+package inheritance.statement;
+
+public class SaleStatement {
+
+	public static void main(String[] args) {
+		//Drink 클래스 사용
+		Drink coffee = new Drink("커피", 2500, 10);
+		Drink 녹차 = new Drink("녹차", 33000, 4);
+		
+		//Alcohol 클래스 사용
+		Alcohol soju = new Alcohol("소주", 3000, 3, 14.5f);
+		Alcohol beer = new Alcohol("맥주", 4000, 2, 5.6f);
+		
+		//Drink 전표 출력
+		Drink.printTitle(); //제목행
+		coffee.printData();
+		녹차.printData();
+		
+		System.out.println();
+		
+		//Alcohol 전표 출력
+		Alcohol.printTitle();
+		soju.printData();
+		beer.printData();
+		
+		//총계 출력
+		int sumVal = coffee.getTotalPrice()	+ 녹차.getTotalPrice()	
+			+ soju.getTotalPrice() + beer.getTotalPrice();
+		
+		System.out.println("\n************ 합계 금액 " + sumVal + "원 ************");
+
+	}
+
+}

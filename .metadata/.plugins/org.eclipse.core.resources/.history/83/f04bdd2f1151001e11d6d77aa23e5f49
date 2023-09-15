@@ -1,0 +1,17 @@
+package reference.subjects2;
+
+import reference.subjects.Subject;
+
+public class Student {
+	//클래스 안에서 변수가 쓰이면 자동으로 초기화 진행 
+	//main에서만 초기화 진행
+	private int studentId; //기존 : int studentId = 0; 초기화
+	private String studentName; //기존 : String studentName = null; 초기화
+	private Subject[] subjects;
+	
+	public Student(int studentId, String studentName) {
+		this.studentId = studentId;
+		this.studentName = studentName;
+		subjects = new Subject[10]; //과목을 담을 배열의 크기 10개 생성
+	}
+}

@@ -1,0 +1,7 @@
+package classes;
+
+//참조(reference) 자료형 
+public class Student {
+	
+
+}

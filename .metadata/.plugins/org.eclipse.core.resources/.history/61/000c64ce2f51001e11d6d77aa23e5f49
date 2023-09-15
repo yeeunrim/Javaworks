@@ -1,0 +1,24 @@
+package statics;
+
+public class Student {
+	//필드
+	//객체를 생성하여 자동으로 학번 증가 - static 사용 (구현 가능)
+	static int serialNum = 1000; //기준값 설정
+	int id;
+	String name;
+	
+	//생성자
+	/*public Student() {
+		serialNum++;
+		id = serialNum;
+	}*/
+	
+	//아이디 - 입력 출력
+	public void setId(int id) {
+		this.id = id;
+	}
+	
+	public int getId() {
+		return id;
+	}
+}

@@ -1,0 +1,16 @@
+package dates;
+
+import java.time.LocalDateTime;
+import java.time.chrono.ChronoLocalDateTime;
+
+public class LacalDateTimeTest {
+
+	public static void main(String[] args) {
+		// LocalDateTime 클래스 사용
+		LocalDateTime now = LocalDateTime.now();
+		System.out.println(now);
+		
+
+	}
+
+}

@@ -1,0 +1,15 @@
+package kr.or.iei.run;
+
+import kr.or.iei.model.User;
+
+public class UserTest2 {
+
+	public static void main(String[] args) {
+		User user1 = new User("sky", "12345", "홍길동");
+		
+		System.out.println("ID : " + user1.getId()); //id 출력
+		System.out.println("Password : " + user1.getPwd()); //pwd 출력
+		System.out.println("Name : " + user1.getName()); //name 출력
+	}
+
+}

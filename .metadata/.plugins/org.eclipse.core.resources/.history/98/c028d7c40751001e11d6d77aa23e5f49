@@ -1,0 +1,19 @@
+package kr.or.iei.model;
+
+//회원(User)클래스 생성
+public class User {
+	//필드(속성)
+	private String id;
+	private String pwd;
+	private String name;
+	
+	//set(), get() 함수 
+	//1. id - 입력, 출력
+	public void SetId(String id) { //입력하는 것은 반환이 아니기 때문에 void 사용
+		this.id = id;
+	}
+	
+	public String getId() {
+		return id;
+	}
+}

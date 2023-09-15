@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.util.Date"/>
+    <fullyQualifiedTypeName name="java.time.chrono.ChronoLocalDateTime"/>
+    <fullyQualifiedTypeName name="java.time.LocalDateTime"/>
+    <fullyQualifiedTypeName name="java.text.SimpleDateFormat"/>
+    <fullyQualifiedTypeName name="javax.print.attribute.standard.DateTimeAtCompleted"/>
+    <fullyQualifiedTypeName name="java.time.format.DateTimeFormatter"/>
+    <fullyQualifiedTypeName name="java.time.LocalDate"/>
+    <fullyQualifiedTypeName name="java.time.LocalTime"/>
+    <fullyQualifiedTypeName name="reference.subjects.Subject"/>
+    <fullyQualifiedTypeName name="statics.Student"/>
+    <fullyQualifiedTypeName name="inheritance.airplane.SuperSonicAirPlane"/>
+    <fullyQualifiedTypeName name="inheritance.statement.Alcohol"/>
+    <fullyQualifiedTypeName name="protectedex.pack1.A"/>
+    <fullyQualifiedTypeName name="overriding.shop.HeadShop"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="kr.or.iei.model.User"/>
+    <fullyQualifiedTypeName name="kr.or.iei.func.Exam"/>
+</qualifiedTypeNameHistroy>

@@ -1,0 +1,30 @@
+package arrays;
+
+public class ArrayGugudan {
+
+	public static void main(String[] args) {
+		//구구단 3단 출력 (배열X)
+		int dan = 3;
+		
+		for(int i=0; i<10; i++) {
+			System.out.println(dan + " X " + i + " = " + dan*i);
+		}
+		System.out.println();
+		
+		//배열을 이용해서 구구단 출력
+		int[] gugudan = new int[9];
+		//gugudan[0] = dan * 1;
+		//System.out.println(gugudan[0]);
+				
+		//배열에 저장
+		for(int i=0; i<gugudan.length; i++) {
+			gugudan[i] = dan * 1;
+			/*for(int j=0; j<gugudan.length; j++) {
+				
+			}*/
+		}
+		
+		System.out.println(gugudan[i]);
+	}
+
+}

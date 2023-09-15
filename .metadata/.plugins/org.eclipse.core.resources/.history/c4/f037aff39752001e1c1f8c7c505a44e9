@@ -1,0 +1,13 @@
+package arraycopy;
+
+public class BookName {
+
+	public static void main(String[] args) {
+		Book book1 = new Book("개미","박명수");
+		
+		System.out.println(book1.toString());
+		System.out.println(book1);
+
+	}
+
+}

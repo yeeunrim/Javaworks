@@ -1,0 +1,25 @@
+package example1;
+
+import java.util.Scanner;
+
+public class SepThirteen {
+
+	public static void main(String[] args) {
+		Scanner scanner = new Scanner(System.in);
+		
+		System.out.println("고객의 이름을 입력하세요.");
+		String customerName = scanner.nextLine();
+		
+		System.out.println("구매 금액을 입력하세요.");
+		int price = scanner.nextInt();
+		
+		double bonusRatio = 0.02;
+		int bonusPoint = 0;
+		
+		bonusPoint = (int) (price * bonusRatio);
+		
+		System.out.println(customerName, "님의 보너스 포인트는 " + bonusPoint + "점 입니다.");
+
+	}
+
+}

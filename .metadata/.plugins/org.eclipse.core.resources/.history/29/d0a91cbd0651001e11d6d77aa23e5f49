@@ -1,0 +1,10 @@
+package kr.or.iei.model;
+
+//회원(User)클래스 생성
+public class User {
+	//필드(속성)
+	private String id;
+	private String pwd;
+	private String name;
+	
+}

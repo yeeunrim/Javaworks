@@ -1,0 +1,17 @@
+package wrapper;
+
+public class IntegerTest {
+
+	public static void main(String[] args) {
+		//int num1 = 100; - 기본 자료형
+		
+		// 클래스  - 기본 자료형처럼 사용 가능
+		Integer num1 = 100;
+		int num2 = 200;
+		
+		int sum = num1 + num2;
+
+		System.out.println(sum);
+	}
+
+}

@@ -1,0 +1,22 @@
+package inheritance.statement;
+
+//부모 클래스
+public class Drink {
+	
+	//필드
+	private String name; //이름
+	private int price; //가격
+	private int count; //수량
+	
+	//생성자 + 매개변수
+	public Drink(String name, int price, int count) {
+		this.name = name;
+		this.price = price;
+		this.count = count;
+	}
+	
+	//출력
+	public void printTitle() {
+		System.out.println("상품명\t가격\t수량\t금액");
+	}
+}

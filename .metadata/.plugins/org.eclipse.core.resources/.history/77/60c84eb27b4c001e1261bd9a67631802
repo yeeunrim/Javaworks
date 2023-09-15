@@ -1,0 +1,22 @@
+package ifexample;
+
+public class NextNumber {
+
+	public static void main(String[] args) {
+		// 두 수중 큰 값을 찾는 프로그램
+		// 변수 - n1, n2, max
+		
+		int n1 = 10;
+		int n2 = 20;
+		int max;
+		
+		// 연산
+		if(n1 >= n2) {
+			max = n1 ;
+		} else {
+			max = n2;
+		}
+		System.out.println(max);
+	}
+
+}

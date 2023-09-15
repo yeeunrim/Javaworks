@@ -1,0 +1,11 @@
+package classes;
+
+//참조(reference) 자료형 
+public class Student {
+	//클래스 내부에서는 변수를 필드(Field)라고 지칭
+	
+	String name; //학생이름 - "임예은"
+	int studentID; //학번 - "201821341"
+	int grade; //학년 
+	
+}

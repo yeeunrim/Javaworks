@@ -1,0 +1,17 @@
+package methods;
+
+public class OneUpTest1 {
+
+	//1증가 하는 함수 정의
+	
+	public static int oneUp() {
+		int x = 1; //지역 변수
+		x++; // x += 1 (다른 언어에서는 이렇게 사용)
+		return x;
+	}
+	
+	public static void main(String[] args) {
+		System.out.println(oneUp());
+	}
+
+}

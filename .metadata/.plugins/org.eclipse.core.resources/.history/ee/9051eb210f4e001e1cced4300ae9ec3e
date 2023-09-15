@@ -1,0 +1,22 @@
+package dates;
+
+import java.time.LocalDateTime;
+import java.time.format.DateTimeFormatter;
+
+public class LacalDateTimeTest {
+
+	public static void main(String[] args) {
+		
+		//LocalDateTime 클래스 사용
+		LocalDateTime now = LocalDateTime.now();
+		System.out.println(now);
+		
+		//날짜, 시간 포맷 설정
+		DateTimeFormatter dtFormat =
+				DateTimeFormatter.ofPattern("yy/MM/dd a HH:mm");
+		
+		System.out.println(now.format(dtFormat));
+		
+	}
+
+}

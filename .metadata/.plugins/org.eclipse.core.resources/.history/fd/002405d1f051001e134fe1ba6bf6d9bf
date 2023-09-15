@@ -1,0 +1,14 @@
+package customers;
+
+public class CustomerTest extends Customer {
+
+	public static void main(String[] args) {
+		private int agentId; //전문 상담원
+		
+		
+		Customer customer = new Customer();
+		
+		customer.customerId = 101;
+	}
+
+}

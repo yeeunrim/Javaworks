@@ -1,0 +1,15 @@
+package inheritance.ex4;
+
+public class Engineer extends Employee {
+
+	private String skillset;
+	
+	public Engineer (String name, String skillset) {
+		super(name);
+		this.skillset = skillset;
+	}
+	
+	public String getSkillSet() {
+		return skillset;
+	}
+}

@@ -1,0 +1,77 @@
+package kr.or.iei.model;
+
+public class User {
+	//필드
+	private String id;
+	private String pwd;
+	private String name;
+	private int age;
+	private String phone; //(변경)
+	
+	//기본 생성자
+	public User() {};
+	
+	//생성자 + 매개변수 (추가)
+	public User(String id, String pwd, String name, int age, String phone) {
+		this.id = id;
+		this.pwd = pwd;
+		this.name = name;
+		this.age = age;
+		this.phone = phone;
+	};
+	
+	//getter,setter
+	//id
+	public String getId() {
+		return id;
+	}
+	
+	public void setId(String id) {
+		this.id = id;
+	}
+	
+	//pwd
+	public String getPwd() {
+		return pwd;
+	}
+	
+	public void setPwd(String pwd) {
+		this.pwd = pwd;
+	}
+	
+	//name
+	public String getName() {
+		return name;
+	}
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+	
+	//age
+	public int getAge() {
+		return age;
+	}
+	
+	public void setAge(int age) {
+		this.age = age;
+	}
+	
+	//phone
+	public String getPhone() {
+		return phone;
+	}
+	
+	public void setPhone(String phone) {
+		this.phone = phone;
+	}
+	
+	//재정의
+	@Override
+	public String toString() {
+		return "id : " + id + ", pwd : " + pwd 
+				+ ", name : " + name + ", age : " + age 
+					+ ", phone : " + phone;
+	}
+	
+}

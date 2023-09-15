@@ -1,0 +1,25 @@
+package reference.subjects;
+
+//subject 자료형 정의
+public class Subject {
+	private String subjectName; //과목 이름
+	private int scorePoint; //과목 점수
+	
+	//getter, setter 추가 - 생성자 없이
+	public void setSubjectName(String subjectName) {
+		this.subjectName = subjectName;
+	}
+	
+	public String getSubjectName(String subjectName) {
+		return subjectName;
+	}
+	
+	public void setScorePoint(int scorePoint) {
+		this.scorePoint = scorePoint;
+	}
+	
+	public int getScorePoint(int ScorePoint) {
+		return ScorePoint;
+	}
+
+}

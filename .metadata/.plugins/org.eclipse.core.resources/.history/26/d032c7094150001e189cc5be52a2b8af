@@ -1,0 +1,27 @@
+package classes;
+
+public class StudentTest {
+
+	public static void main(String[] args) {
+		//Student 객체(변수) 생성
+		//new를 할 시, 메모리 영역(heap 영역 사용) -> 출력이 가능하다는 뜻
+		//점 연산자로 접근한다.
+		Student student1 = new Student();
+		student1.name = "임예은";
+		student1.studentID = 201821341;
+		
+		System.out.println("학생 이름 : " + student1.name);
+		System.out.println("학번 : " + student1.studentID);
+		
+		System.out.println();
+		
+		Student student2 = new Student();
+		student2.name = "홍길동";
+		student2.studentID = 202221341;
+		
+		System.out.println("학생 이름 : " + student2.name);
+		System.out.println("학번 : " + student2.studentID);
+
+	}
+
+}

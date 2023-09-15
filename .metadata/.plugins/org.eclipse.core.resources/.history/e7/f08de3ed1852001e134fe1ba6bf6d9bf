@@ -1,0 +1,12 @@
+package example1;
+
+public class SepThirteen {
+
+	public static void main(String[] args) {
+		int num = int(7.45);
+		
+		System.out.println(num);
+
+	}
+
+}

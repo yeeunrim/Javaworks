@@ -1,0 +1,13 @@
+package wrapper;
+
+public class IntegerTest {
+
+	public static void main(String[] args) {
+		//int num1 = 100;
+		
+		Integer num1 = 100;
+
+		System.out.println(num1);
+	}
+
+}

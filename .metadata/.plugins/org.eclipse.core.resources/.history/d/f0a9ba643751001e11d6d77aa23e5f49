@@ -1,0 +1,8 @@
+package inheritance.airplane;
+
+//부모 클래스
+public class AirPlane {
+	public void takeOff() {
+		System.out.println("비행기가 이륙합니다.");
+	}
+}

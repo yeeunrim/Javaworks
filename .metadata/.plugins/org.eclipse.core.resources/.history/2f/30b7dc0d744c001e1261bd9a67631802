@@ -1,0 +1,16 @@
+package ifexample;
+
+public class LimitSpeedTest {
+
+	public static void main(String[] args) {
+		// if문
+		// 제한 속도(limit speed) 50이면 "제한 속도 위반"
+		
+		int limitSpeed = 55;
+		
+		System.out.println(limitSpeed);
+		
+
+	}
+
+}

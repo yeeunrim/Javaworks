@@ -1,0 +1,15 @@
+package arrays;
+
+public class ArrayGugudan {
+
+	public static void main(String[] args) {
+		//구구단 3단 출력 (배열X)
+		int dan = 3;
+		
+		for(int i=0; i<10; i++) {
+			System.out.println(dan + " X " + i = "=" + dan*i);
+		}
+
+	}
+
+}

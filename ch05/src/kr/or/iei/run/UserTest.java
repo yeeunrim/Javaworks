@@ -1,0 +1,22 @@
+package kr.or.iei.run;
+
+import kr.or.iei.model.User; //User와 UserTest의 패키지가 서로 다름 (Import 필요)
+
+public class UserTest {
+
+	public static void main(String[] args) {
+		//자료형 호출 
+		//user1 = 인스턴스(객체)
+		User user1 = new User();
+		
+		user1.SetId("abc123");
+		user1.SetPwd("12345!");
+		user1.SetName("임예은");
+		
+		System.out.println("ID : " + user1.getId()); //id 출력
+		System.out.println("Password : " + user1.getPwd()); //pwd 출력
+		System.out.println("Name : " + user1.getName()); //name 출력
+		// System.out.println(user1); //인스턴스 주소 출력 (메모리 주소)
+	}
+
+}

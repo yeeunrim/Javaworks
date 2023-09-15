@@ -1,0 +1,19 @@
+package reference.circle;
+
+public class CircleTest {
+
+	public static void main(String[] args) {
+		/*Circle c1 = new Circle(2, 5, 7);
+		c1.showCircleInfo();
+		
+		Circle c2 = new Circle(10, 12, 10);
+		c2.showCircleInfo();
+		*/
+		
+		//객체 배열
+		Circle[] circle = {
+				new Circle(2, 5, 7), //Circle[0]
+				new Circle(10, 12, 10) //Circle[1]
+		};
+	}
+}
