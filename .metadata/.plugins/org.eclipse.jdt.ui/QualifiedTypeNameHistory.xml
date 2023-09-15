@@ -14,8 +14,10 @@
     <fullyQualifiedTypeName name="inheritance.statement.Alcohol"/>
     <fullyQualifiedTypeName name="protectedex.pack1.A"/>
     <fullyQualifiedTypeName name="overriding.shop.HeadShop"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="kr.or.iei.model.User"/>
     <fullyQualifiedTypeName name="kr.or.iei.func.Exam"/>
+    <fullyQualifiedTypeName name="java.util.Calendar"/>
+    <fullyQualifiedTypeName name="java.time.temporal.ChronoUnit"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
 </qualifiedTypeNameHistroy>
