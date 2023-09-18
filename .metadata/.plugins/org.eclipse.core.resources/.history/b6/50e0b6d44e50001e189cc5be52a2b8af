@@ -1,8 +1,0 @@
-package classes.methods;
-
-public class Calculator {
-	//메서드 정의 - 더하기, 나누기, 빼기, 곱하기
-	public int add(int n1, int n2) {
-		return n1 * n2;
-	}
-}
