@@ -28,6 +28,16 @@ public class ButtonTest {
 		});
 		button.touch();
 		
+		//쇼핑 - 구매 구현
+		button.setListener(new Button.OnClickListener() {
+			
+			@Override
+			public void onClick() {
+				System.out.println("상품을 구매합니다");
+			}
+		});
+		button.touch();
+		
 	}
 
 }
