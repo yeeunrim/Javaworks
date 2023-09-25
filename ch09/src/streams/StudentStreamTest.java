@@ -31,7 +31,7 @@ public class StudentStreamTest {
 		//학생 객체에 있는 이름만 출력한 것
 		stdStream = list.stream();
 		stdStream.map(std -> std.getName())
-				.forEach(std -> System.out.println(std));
+				 .forEach(std -> System.out.println(std));
 		
 		System.out.println("===============");
 		
