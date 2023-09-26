@@ -1,3 +1,5 @@
+//GPT와 함께 수정한 것
+
 package banking.array;
 
 import java.util.Scanner;

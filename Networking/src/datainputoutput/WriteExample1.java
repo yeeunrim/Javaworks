@@ -9,7 +9,7 @@ public class WriteExample1 {
 	
 	public static void main(String[] args) {
 		
-		//출력 스트림 객체 생성
+		//출력 스트림 객체 생성 (생성자 - 파일 경로)
 		try {
 			OutputStream os = new FileOutputStream("/Users/rim-yeeun/file/test1.db");
 			
@@ -17,6 +17,8 @@ public class WriteExample1 {
 			byte a = 10;
 			byte b = 20;
 			byte c = 30;
+			//char d = '가'; -> byte기반이라서 안됨
+			//int d = 97; -> 아스키 코드값(문자 출력 = a), 읽을 때 char로 형변환 필수
 			
 			//db 파일에 데이터 쓰기
 			os.write(a);

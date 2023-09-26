@@ -13,9 +13,14 @@ public class ReadExample1 {
 		try {
 			InputStream is = new FileInputStream("/Users/rim-yeeun/file/test1.db");
 			
-			while(true) {
+			/*while(true) {
 				int data = is.read();
 				if(data == -1) break; //-1은 데이터가 없는 경우를 말함(null)
+				System.out.println(data);
+			}*/
+			
+			int data;
+			while((data = is.read()) != -1) {
 				System.out.println(data);
 			}
 			
