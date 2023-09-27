@@ -41,6 +41,7 @@ public class DataInputOutputStreamTest {
 			DataInputStream dis = new DataInputStream(is)) {
 			
 			//기본 타입 자료 읽기
+			//주의할 점은 파일의 쓴 순서대로 읽어줘야 한다.
 			for(int i=0; i<2; i++) { //데이터 수 만큼 반복
 				int num = dis.readInt();
 				String name = dis.readUTF();
