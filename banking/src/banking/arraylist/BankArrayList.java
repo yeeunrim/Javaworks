@@ -3,6 +3,7 @@ package banking.arraylist;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
+import java.util.regex.Pattern;
 
 import banking.array.Account;
 
@@ -20,9 +21,9 @@ public class BankArrayList {
 		while(sw) {
 			try {
 				//메뉴판
-				System.out.println("=======================================================");
-				System.out.println("1. 계좌 생성 | 2. 계좌 목록 | 3. 예금 | 4. 출금 | 5. 종료");
-				System.out.println("=======================================================");
+				System.out.println("================================================================");
+				System.out.println("1. 계좌 생성 | 2. 계좌 목록 | 3. 예금 | 4. 출금 | 5. 계좌 삭제 | 6. 종료");
+				System.out.println("================================================================");
 				System.out.print("선택 > ");
 				
 				//메뉴 선택
@@ -38,6 +39,8 @@ public class BankArrayList {
 				} else if (selectNo == 4) {
 					withdraw();       //출금
 				} else if (selectNo == 5) {
+					removeAccount();       //계좌 삭제
+				} else if (selectNo == 6) {
 					sw = false;       //종료
 				} else {
 					System.out.println("지원되지 않는 기능입니다. 다시 입력해주세요.");
@@ -62,25 +65,34 @@ public class BankArrayList {
 		
 		//계좌 중복 방지
 		while(true) {
-			System.out.print("계좌번호 > ");
+			System.out.print("계좌번호 [형식(숫자):00-00-000] > ");
+			String regExp = "\\d{2}-\\d{2}-\\d{3}";
+			
 			String ano = scanner.nextLine();
 			
-			//중복 계좌가 있는 지 채킹
-			if(findAccount(ano) != null) {//중복 계좌가 있으면
-				System.out.println("확인 ! 중복 계좌입니다. 다시 입력해주세요.");
-			} else {//중복 계좌가 없으면
-				System.out.print("계좌주 > ");
-				String owner = scanner.nextLine();
-				
-				System.out.print("초기 입금액 > ");
-				int balance = Integer.parseInt(scanner.nextLine());
-				
-				//입력받은 내용을 매개변수로 계좌 생성함
-				Account newAccount = new Account(ano, owner, balance);
-				accountList.add(newAccount); //arrayList에 저장
-				System.out.println("결과 : 계좌가 생성되었습니다.");
-				break;
-			} //if~else 끝		
+			boolean result = Pattern.matches(regExp, ano);
+			
+			if(result) {
+				//중복 계좌가 있는 지 채킹
+				if(findAccount(ano) != null) {//중복 계좌가 있으면
+					System.out.println("확인 ! 중복 계좌입니다. 다시 입력해주세요.");
+				} else {//중복 계좌가 없으면
+					System.out.print("계좌주 > ");
+					String owner = scanner.nextLine();
+					
+					System.out.print("초기 입금액 > ");
+					int balance = Integer.parseInt(scanner.nextLine());
+					
+					//입력받은 내용을 매개변수로 계좌 생성함
+					Account newAccount = new Account(ano, owner, balance);
+					accountList.add(newAccount); //arrayList에 저장
+					System.out.println("결과 : 계좌가 생성되었습니다.");
+					break;
+				} //if~else 끝
+			} else {
+				System.out.println("올바르지 않은 형식입니다. 올바르게 다시 작성해주세요.");
+			}
+			 
 		} //while 끝
 		
 	} //createAccount 끝
@@ -160,6 +172,42 @@ public class BankArrayList {
 		} //바깥쪽 while 끝
 		
 	} //withdraw 끝
+	
+	//계좌 삭제
+	private static void removeAccount() {
+		
+		System.out.println("=======================================================");
+		System.out.println("                        계좌 삭제                         ");
+		System.out.println("=======================================================");
+		
+		//계좌를 입력하고 그 입력한 계좌랑 원래 있던 계좌랑 비교하고 있으면 삭제
+		while(true) {
+			System.out.print("계좌번호 [형식(숫자):00-00-000] > ");
+			String regExp = "\\d{2}-\\d{2}-\\d{3}";
+			
+			String ano = scanner.nextLine();
+			
+			boolean result = Pattern.matches(regExp, ano);
+			
+			if(result) {
+				//계좌가 있는 지 채킹
+				Account account = findAccount(ano);
+				
+				if(findAccount(ano) != null) {//계좌가 있으면
+					//계좌 삭제
+					accountList.remove(account);
+					System.out.println("계좌가 삭제되었습니다.");
+					break;
+				} else {//중복 계좌가 없으면
+					System.out.println("삭제할 계좌가 없습니다. 다시 확인해주세요.");
+				} //if~else 끝
+			} else {
+				System.out.println("올바르지 않은 형식입니다. 올바르게 다시 작성해주세요.");
+			}
+			 
+		} //while 끝
+		
+	} //removeAccount 끝
 	
 	//계좌 검색
 	private static Account findAccount(String ano) {
