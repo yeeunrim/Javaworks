@@ -6,7 +6,7 @@ import java.io.OutputStream;
 import java.net.Socket;
 import java.net.UnknownHostException;
 
-public class ClientSample {
+public class EcoClient {
 	
 	public static void main(String[] args) {
 		
@@ -28,6 +28,8 @@ public class ClientSample {
 			InputStream is = socket.getInputStream();
 			bytes = new byte[1024];
 			int readBytes = is.read(bytes);
+			//문자열로 복원(디코딩)
+			//인코딩과 디코딩의 방식을 일치해야지 깨지지않고 출력될 수 있음
 			String receiveMessage = new String(bytes, 0, readBytes, "utf-8");
 			System.out.println("[클라이언트] 데이터 받음 : " + receiveMessage);
 			

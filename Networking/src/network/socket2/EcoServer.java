@@ -8,7 +8,8 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Scanner;
 
-public class ServerSample {
+//TCP 네트워킹
+public class EcoServer {
 	
 	//서버 소켓 객체 선언
 	private static ServerSocket serverSocket;
@@ -24,7 +25,7 @@ public class ServerSample {
 		Scanner scanner = new Scanner(System.in);
 		while(true)	{
 			String key = scanner.nextLine();
-			if(key.toLowerCase().equals("q"))
+			if(key.toLowerCase().equals("q")) //대문자가 입력될 시, 소문자로 바꿈
 				break;
 		}
 		
@@ -68,7 +69,7 @@ public class ServerSample {
 						os.write(bytes);
 						
 						os.flush();
-						System.out.println("[서버] 받은 데이터를 다시 보냄" + message);
+						System.out.println("[서버] 받은 데이터를 다시 보냄 : " + message);
 						
 						socket.close(); //소켓 종료
 						System.out.println("[서버] " + clientIP + "의 연결을 끊음");
