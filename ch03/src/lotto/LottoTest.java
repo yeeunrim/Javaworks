@@ -1,5 +1,7 @@
 package lotto;
 
+import java.util.Arrays;
+
 public class LottoTest {
 
 	public static void main(String[] args) {
@@ -9,7 +11,7 @@ public class LottoTest {
 		
 		int[] lotto = new int[6];
 		
-		lotto[0] = (int) (Math.random()*45) + 1;
+		//lotto[0] = (int) (Math.random()*45) + 1;
 		//System.out.println(lotto[0]);
 
 		// 6개 동시에 생성
@@ -43,6 +45,10 @@ public class LottoTest {
 		//파일 이름 출력 
 		LottoTest lottoTest = new LottoTest();
 		System.out.println(lottoTest); //lotto.LottoTest@2133c8f8
+		
+		//객체로 출력
+		System.out.println(Arrays.toString(lotto)); 
+		
 	}
 
 }
