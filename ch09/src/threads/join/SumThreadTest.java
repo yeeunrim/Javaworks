@@ -1,3 +1,4 @@
+
 package threads.join;
 
 public class SumThreadTest {

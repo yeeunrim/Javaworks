@@ -4,5 +4,5 @@
 /**
  * 
  */
-module Test_network {
+module chatting {
 }
