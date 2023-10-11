@@ -8,13 +8,15 @@ import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.Scanner;
 import java.util.concurrent.ExecutorService;
+import java.util.concurrent.Executors;
 
 //TCP 네트워킹
 public class EcoServer {
 	
 	//서버 소켓 객체 선언
 	private static ServerSocket serverSocket;
-	private static ExecutorService executorService;
+	//서버에서 동시 처리할 스레드 10개 생성
+	private static ExecutorService executorService = Executors.newFixedThreadPool(10);
 
 	public static void main(String[] args) {
 		System.out.println("============================================");
