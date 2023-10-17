@@ -227,31 +227,39 @@ public class AccountDAO {
 		System.out.println("===========================================================================");
 		System.out.println("                                  계좌 삭제                                  ");
 		System.out.println("===========================================================================");
-		
+	
 		while(true) {
 			System.out.print("계좌 번호: ");
 			String ano = scanner.nextLine();
-		
-			if(findAccount(ano) != null) { //찾는 계좌가 있으면
-				//db 처리
-				try {
-					conn = JDBCUtil.getConnection();
-					String sql = "DELETE FROM account WHERE ano = ?";
-					pstmt = conn.prepareStatement(sql);
-					
-					pstmt.setString(1, ano);
-					
-					//sql 실행
-					pstmt.executeUpdate();
-					System.out.println("결과 : 정상 처리가 되었습니다.");
-				} catch (SQLException e) {
-					e.printStackTrace();
-				} finally {
-					JDBCUtil.close(conn, pstmt);
-				}
-				break;
-			}else {
+			
+				if(findAccount(ano) != null) { //찾는 계좌가 있으면
+					System.out.println("1.OK | 2.Cancel");
+					String num = scanner.nextLine();
+						
+					if(num.equals("1")) {
+						//db 처리
+						try {
+							conn = JDBCUtil.getConnection();
+							String sql = "DELETE FROM account WHERE ano = ?";
+							pstmt = conn.prepareStatement(sql);
+								
+							pstmt.setString(1, ano);
+								
+							//sql 실행
+							pstmt.executeUpdate();
+							System.out.println("결과 : 정상 처리가 되었습니다.");
+						} catch (SQLException e) {
+							e.printStackTrace();
+						} finally {
+							JDBCUtil.close(conn, pstmt);
+						}
+						break;
+						}else {
+						System.out.println("계좌 삭제가 취소되었습니다.");
+					}
+			} else {
 				System.out.println("결과: 계좌가 없습니다. 다시 입력해 주세요");
+				break;
 			}
 		} //while 끝
 			
