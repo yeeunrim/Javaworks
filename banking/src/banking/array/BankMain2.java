@@ -4,6 +4,8 @@ package banking.array;
 
 import java.util.Scanner;
 
+import banking.domain.Account;
+
 public class BankMain2 {
 
 	//계좌를 저장할 배열의 크기를 100으로 설정

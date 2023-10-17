@@ -42,7 +42,7 @@ public class BoardSelectTest {
 			
 			//물음표(?) 값 지정
 			//배열 아님 - 1부터 시작
-			pstmt.setString(1, "sky123");
+			pstmt.setString(1, "cloud");
 			
 			//sql 실행 - 메서드
 			ResultSet rs = pstmt.executeQuery();
@@ -66,14 +66,18 @@ public class BoardSelectTest {
 					InputStream is = blob.getBinaryStream();
 					OutputStream os = new FileOutputStream("/Users/rim-yeeun/file/" + board.getBfileName());
 					
-					byte[] data = new byte[1024];
-					while(true) {
+					//바이너리 파일 읽고 쓰기
+					byte[] data = new byte[150000];
+					/* while(true) {
 						int num = is.read();
 						if(num == -1) {
 							break;
 						}
 						os.write(data, 0, num);
-					}
+					} */
+					
+					is.transferTo(os); //바이너리 파일 쓰기				
+					
 					os.flush();
 					os.close();
 					is.close();

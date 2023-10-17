@@ -5,7 +5,7 @@ import java.util.List;
 import java.util.Scanner;
 import java.util.regex.Pattern;
 
-import banking.array.Account;
+import banking.domain.Account;
 
 public class BankArrayList {
 	
@@ -79,16 +79,25 @@ public class BankArrayList {
 				if(findAccount(ano) != null) {//중복 계좌가 있으면
 					System.out.println("확인 ! 중복 계좌입니다. 다시 입력해주세요.");
 				} else {//중복 계좌가 없으면
-					System.out.print("계좌주 > ");
-					String owner = scanner.nextLine();
-					
-					System.out.print("초기 입금액 > ");
-					int balance = Integer.parseInt(scanner.nextLine());
-					
-					//입력받은 내용을 매개변수로 계좌 생성함
-					Account newAccount = new Account(ano, owner, balance);
-					accountList.add(newAccount); //arrayList에 저장
-					System.out.println("결과 : 계좌가 생성되었습니다.");
+					while(true) {
+						System.out.print("계좌주 [영어, 한글 가능] > ");
+						String regExp2 = "[a-zA-Z가-힣]+";
+						String owner = scanner.nextLine();
+						
+						result = Pattern.matches(regExp2, owner);
+						if(result) {
+							System.out.print("초기 입금액 [숫자만 가능] > ");
+							int balance = Integer.parseInt(scanner.nextLine());
+							
+							//입력받은 내용을 매개변수로 계좌 생성함
+							Account newAccount = new Account(ano, owner, balance);
+							accountList.add(newAccount); //arrayList에 저장
+							System.out.println("결과 : 계좌가 생성되었습니다.");
+							break;
+						} else {
+							System.out.println("올바르지 않은 형식입니다. 올바르게 다시 작성해주세요.");
+						}
+					}
 					break;
 				} //if~else 끝
 			} else {
