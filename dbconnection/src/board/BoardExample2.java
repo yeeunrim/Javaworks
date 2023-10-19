@@ -292,6 +292,20 @@ public class BoardExample2 {
 				pstmt = conn.prepareStatement(sql);
 				
 				pstmt.executeUpdate();
+				
+				//글번호가 삭제 후에 이어진 번호 출력되는 문제 발생
+				//이를 해결하기 아래의 메서드(dropSeq(), createSeq())로
+				//시퀀스를 삭제하고 재성성함
+				//길고 복잡한 코드일 경우에는 메서드로 작성해서 사용하면 좋지만 
+				//짧은 코드일 경우에는 이처럼 그냥 작성하는 것도 좋음
+				//추가로 시퀀스는 Oracle에만 있는 것이다.
+				/*sql = "DROP SEQUENCE seq";
+				pstmt = conn.prepareStatement(sql);
+				pstmt.executeUpdate();
+				////////////////////////////////////
+				sql = "CREATE SEQUENCE seq NOCACHE";
+				pstmt = conn.prepareStatement(sql);
+				pstmt.executeUpdate(); */
 
 				pstmt.close();
 				System.out.println("게시글이 삭제되었습니다.");
@@ -301,14 +315,15 @@ public class BoardExample2 {
 			}
 		}
 		
-		drop();
+		dropSeq();
 		createSeq();
 		list();
 		
 	} //clear() 끝
 	
-	public void drop() {
+	public void dropSeq() {
 		
+		//시퀀스 1부터 초기화 메서드
 		//db 작업
 		try {
 			String sql = "DROP SEQUENCE seq";
@@ -329,7 +344,7 @@ public class BoardExample2 {
 		
 		//db 작업
 		try {
-			String sql = "CREATE SEQUENCE seq";
+			String sql = "CREATE SEQUENCE seq NOCACHE";
 			
 			pstmt = conn.prepareStatement(sql);
 			
