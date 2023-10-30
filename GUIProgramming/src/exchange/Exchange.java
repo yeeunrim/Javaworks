@@ -18,10 +18,10 @@ public class Exchange extends JFrame implements ActionListener{
 	
 	//필드
 	String[] currency = {"달러($)", "위안(¥)", "유로(€)", "엔(¥)"};
-	static final float USD = 1357.50F; //미국 달러 환율
-	static final float CNY = 185.58F; //중국 위안 환율
-	static final float EUR = 1432.43F; //유럽 유로 환율
-	static final float JPY = 904.01F; //일본 엔화 환율 (100엔 기준)
+	static final float USD = 1352.0F; //미국 달러 환율
+	static final float CNY = 184.42F; //중국 위안 환율
+	static final float EUR = 1426.09F; //유럽 유로 환율
+	static final float JPY = 904.26F; //일본 엔화 환율 (100엔 기준)
 	 
 	JPanel panel1;
 	JPanel panel2;
@@ -84,7 +84,7 @@ public class Exchange extends JFrame implements ActionListener{
 			
 			if(currency.equals("달러($)")) {
 				won = won / USD;
-//				label2.setText(String.valueOf(won));
+     			//label2.setText(String.valueOf(won));
 				label2.setText(String.format("변환 결과 > %.2f$", won));
 			} else if(currency.equals("위안(¥)")) {
 				won = won / CNY;
